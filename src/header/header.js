@@ -1,14 +1,12 @@
 import React, { Fragment, useState } from "react";
-import { styles } from "../counterButtons/styles";
-import CounterButtons from "../counterButtons/counterButtons";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
+import { styles } from "../styles/styles";
 
 const Header = () => {
   const [numType, setNumType] = useState("even");
-
   const [count, setCount] = useState(0);
 
   const increment = () => {
@@ -40,7 +38,6 @@ const Header = () => {
           </span>
         </div>
         <div style={styles.marginRight}>
-          {/* <CounterButtons type={typeOfNum} /> */}
           <Stack spacing={2} direction="row" style={styles.counterAlignment}>
             <Button
               onClick={() => {
